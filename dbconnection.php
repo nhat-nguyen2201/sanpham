@@ -8,16 +8,17 @@ function db(): PDO {
 
   $host = 'localhost';
   $db   = 'db_sanpham';
-  $user = 'root';
-  $pass = '';
+  $user = 'sanpham';
+  $pass = '123456';
   $charset = 'utf8mb4';
 
   $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
   $options = [
-    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-    PDO::ATTR_EMULATE_PREPARES   => false,
+    PDO::ATTR_EMULATE_PREPARES => false,
   ];
-  $pdo = new PDO($dsn, $user, $pass, $options);
-  return $pdo;
+
+  return new PDO($dsn, $user, $pass, $options);
 }
+
