@@ -8,8 +8,8 @@ function db(): PDO {
 
   $host = 'localhost';
   $db   = 'db_sanpham';
-  $user = 'sanpham';
-  $pass = '123456';
+  $user = 'appuser';
+  $pass = 'StrongPass123';
   $charset = 'utf8mb4';
 
   $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
