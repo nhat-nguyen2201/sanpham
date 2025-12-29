@@ -13,11 +13,12 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: Upload backend to VPS
+      - name: Upload backend to VPS
       uses: appleboy/scp-action@v0.1.7
       with:
         host: ${{ secrets.VPS_HOST }}
         username: ${{ secrets.VPS_USER }}
         password: ${{ secrets.VPS_PASSWORD }}
-        source: "sanpham/*"
+        source: "."
         target: "/var/www/html/sanpham"
+
